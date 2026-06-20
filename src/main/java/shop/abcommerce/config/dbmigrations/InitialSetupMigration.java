@@ -28,7 +28,9 @@ public class InitialSetupMigration {
         userAuthority = template.save(userAuthority);
         Authority adminAuthority = createAdminAuthority();
         adminAuthority = template.save(adminAuthority);
-        addUsers(userAuthority, adminAuthority);
+        Authority supervisorAuthority = createSupervisorAuthority();
+        supervisorAuthority = template.save(supervisorAuthority);
+        addUsers(userAuthority, adminAuthority, supervisorAuthority);
     }
 
     @RollbackExecution
@@ -50,11 +52,18 @@ public class InitialSetupMigration {
         return userAuthority;
     }
 
-    private void addUsers(Authority userAuthority, Authority adminAuthority) {
+    private Authority createSupervisorAuthority() {
+        Authority supervisorAuthority = createAuthority(AuthoritiesConstants.SUPERVISOR);
+        return supervisorAuthority;
+    }
+
+    private void addUsers(Authority userAuthority, Authority adminAuthority, Authority supervisorAuthority) {
         User user = createUser(userAuthority);
         template.save(user);
         User admin = createAdmin(adminAuthority, userAuthority);
         template.save(admin);
+        User supervisor = createSupervisor(supervisorAuthority, adminAuthority);
+        template.save(supervisor);
     }
 
     private User createUser(Authority userAuthority) {
@@ -88,5 +97,22 @@ public class InitialSetupMigration {
         adminUser.getAuthorities().add(adminAuthority);
         adminUser.getAuthorities().add(userAuthority);
         return adminUser;
+    }
+
+    private User createSupervisor(Authority supervisorAuthority, Authority adminAuthority) {
+        User supervisorUser = new User();
+        supervisorUser.setId("user-3");
+        supervisorUser.setLogin("supervisor");
+        supervisorUser.setPassword("$2a$10$gSAhZrxMllrbgj/kkK9UceBPpChGWJA7SYIb1Mqo.n5aNLq1/oRrC");
+        supervisorUser.setFirstName("supervisor");
+        supervisorUser.setLastName("Supervisor");
+        supervisorUser.setEmail("Administrator@localhost");
+        supervisorUser.setActivated(true);
+        supervisorUser.setLangKey("es");
+        supervisorUser.setCreatedBy(Constants.SYSTEM);
+        supervisorUser.setCreatedDate(Instant.now());
+        supervisorUser.getAuthorities().add(supervisorAuthority);
+        supervisorUser.getAuthorities().add(adminAuthority);
+        return supervisorUser;
     }
 }
