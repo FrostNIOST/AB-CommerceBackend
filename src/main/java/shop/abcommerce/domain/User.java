@@ -22,7 +22,7 @@ import shop.abcommerce.config.Constants;
  */
 @org.springframework.data.mongodb.core.mapping.Document(collection = "project_user")
 public class User extends AbstractAuditingEntity<String> implements Serializable {
-// pequeño cambio -_-
+
     @Serial
     private static final long serialVersionUID = 1L;
 
