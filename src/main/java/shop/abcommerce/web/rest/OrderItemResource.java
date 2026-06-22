@@ -14,6 +14,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import shop.abcommerce.repository.OrderItemRepository;
@@ -55,6 +57,8 @@ public class OrderItemResource {
      * @throws URISyntaxException if the Location URI syntax is incorrect.
      */
     @PostMapping("")
+    @Transactional
+    @PreAuthorize("hasRole('ROLE_ADMIN') or hasAuthority('ROLE_SUPERVISOR') or hasAuthority('ROLE_USER')")
     public ResponseEntity<OrderItemDTO> createOrderItem(@Valid @RequestBody OrderItemDTO orderItemDTO) throws URISyntaxException {
         LOG.debug("REST request to save OrderItem : {}", orderItemDTO);
         if (orderItemDTO.getId() != null) {
@@ -77,6 +81,8 @@ public class OrderItemResource {
      * @throws URISyntaxException if the Location URI syntax is incorrect.
      */
     @PutMapping("/{id}")
+    @Transactional
+    @PreAuthorize("hasRole('ROLE_ADMIN') or hasAuthority('ROLE_SUPERVISOR')")
     public ResponseEntity<OrderItemDTO> updateOrderItem(
         @PathVariable(value = "id", required = false) final String id,
         @Valid @RequestBody OrderItemDTO orderItemDTO
@@ -111,6 +117,8 @@ public class OrderItemResource {
      * @throws URISyntaxException if the Location URI syntax is incorrect.
      */
     @PatchMapping(value = "/{id}", consumes = { "application/json", "application/merge-patch+json" })
+    @Transactional
+    @PreAuthorize("hasRole('ROLE_ADMIN') or hasAuthority('ROLE_SUPERVISOR')")
     public ResponseEntity<OrderItemDTO> partialUpdateOrderItem(
         @PathVariable(value = "id", required = false) final String id,
         @NotNull @RequestBody OrderItemDTO orderItemDTO
@@ -143,6 +151,8 @@ public class OrderItemResource {
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and the list of Order Items in body.
      */
     @GetMapping("")
+    @Transactional(readOnly = true)
+    @PreAuthorize("hasRole('ROLE_ADMIN') or hasAuthority('ROLE_SUPERVISOR') or hasAuthority('ROLE_USER')")
     public ResponseEntity<List<OrderItemDTO>> getAllOrderItems(
         @org.springdoc.core.annotations.ParameterObject Pageable pageable,
         @RequestParam(name = "eagerload", required = false, defaultValue = "true") boolean eagerload
@@ -165,6 +175,8 @@ public class OrderItemResource {
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the orderItemDTO, or with status {@code 404 (Not Found)}.
      */
     @GetMapping("/{id}")
+    @Transactional(readOnly = true)
+    @PreAuthorize("hasRole('ROLE_ADMIN') or hasAuthority('ROLE_SUPERVISOR') or hasAuthority('ROLE_USER')")
     public ResponseEntity<OrderItemDTO> getOrderItem(@PathVariable("id") String id) {
         LOG.debug("REST request to get OrderItem : {}", id);
         Optional<OrderItemDTO> orderItemDTO = orderItemService.findOne(id);
@@ -178,6 +190,8 @@ public class OrderItemResource {
      * @return the {@link ResponseEntity} with status {@code 204 (NO_CONTENT)}.
      */
     @DeleteMapping("/{id}")
+    @Transactional
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ResponseEntity<Void> deleteOrderItem(@PathVariable("id") String id) {
         LOG.debug("REST request to delete OrderItem : {}", id);
         orderItemService.delete(id);

@@ -14,6 +14,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import shop.abcommerce.repository.WishlistRepository;
@@ -55,6 +57,8 @@ public class WishlistResource {
      * @throws URISyntaxException if the Location URI syntax is incorrect.
      */
     @PostMapping("")
+    @Transactional
+    @PreAuthorize("hasAnyAuthority('ROLE_USER') or hasAuthority('ROLE_SUPERVISOR') or hasAuthority('ROLE_USER')")
     public ResponseEntity<WishlistDTO> createWishlist(@Valid @RequestBody WishlistDTO wishlistDTO) throws URISyntaxException {
         LOG.debug("REST request to save Wishlist : {}", wishlistDTO);
         if (wishlistDTO.getId() != null) {
@@ -111,6 +115,8 @@ public class WishlistResource {
      * @throws URISyntaxException if the Location URI syntax is incorrect.
      */
     @PatchMapping(value = "/{id}", consumes = { "application/json", "application/merge-patch+json" })
+    @Transactional
+    @PreAuthorize("hasAnyAuthority('ROLE_USER') or hasAuthority('ROLE_SUPERVISOR') or hasAuthority('ROLE_USER')")
     public ResponseEntity<WishlistDTO> partialUpdateWishlist(
         @PathVariable(value = "id", required = false) final String id,
         @NotNull @RequestBody WishlistDTO wishlistDTO
@@ -143,6 +149,7 @@ public class WishlistResource {
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and the list of Wishlists in body.
      */
     @GetMapping("")
+    @PreAuthorize("hasAnyAuthority('ROLE_USER') or hasAuthority('ROLE_SUPERVISOR') or hasAuthority('ROLE_USER')")
     public ResponseEntity<List<WishlistDTO>> getAllWishlists(
         @org.springdoc.core.annotations.ParameterObject Pageable pageable,
         @RequestParam(name = "eagerload", required = false, defaultValue = "true") boolean eagerload
@@ -165,6 +172,7 @@ public class WishlistResource {
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the wishlistDTO, or with status {@code 404 (Not Found)}.
      */
     @GetMapping("/{id}")
+    @PreAuthorize("hasAnyAuthority('ROLE_USER') or hasAuthority('ROLE_SUPERVISOR') or hasAuthority('ROLE_USER')")
     public ResponseEntity<WishlistDTO> getWishlist(@PathVariable("id") String id) {
         LOG.debug("REST request to get Wishlist : {}", id);
         Optional<WishlistDTO> wishlistDTO = wishlistService.findOne(id);
@@ -178,6 +186,8 @@ public class WishlistResource {
      * @return the {@link ResponseEntity} with status {@code 204 (NO_CONTENT)}.
      */
     @DeleteMapping("/{id}")
+    @Transactional
+    @PreAuthorize("hasAnyAuthority('ROLE_USER')")
     public ResponseEntity<Void> deleteWishlist(@PathVariable("id") String id) {
         LOG.debug("REST request to delete Wishlist : {}", id);
         wishlistService.delete(id);
