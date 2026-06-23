@@ -57,8 +57,8 @@ public class ProductResource {
      * @throws URISyntaxException if the Location URI syntax is incorrect.
      */
     @PostMapping("")
-    @Transactional
-    @PreAuthorize("hasAnyRole('ROLE_ADMIN') or hasAuthority('ROLE_SUPERVISOR')")
+    //@Transactional
+    @PreAuthorize("hasAuthority('ROLE_ADMIN') or hasAuthority('ROLE_SUPERVISOR')")
     public ResponseEntity<ProductDTO> createProduct(@Valid @RequestBody ProductDTO productDTO) throws URISyntaxException {
         LOG.debug("REST request to save Product : {}", productDTO);
         if (productDTO.getId() != null) {
