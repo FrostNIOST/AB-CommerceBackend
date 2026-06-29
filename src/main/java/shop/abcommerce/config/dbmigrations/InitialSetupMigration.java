@@ -68,7 +68,7 @@ public class InitialSetupMigration {
 
     private User createUser(Authority userAuthority) {
         User userUser = new User();
-        userUser.setId("user-2");
+        //userUser.setId("user-2");
         userUser.setLogin("user");
         userUser.setPassword("$2a$10$VEjxo0jq2YG9Rbk2HmX9S.k1uZBGYUHdUcid3g/vfiEl7lwWgOH/K");
         userUser.setFirstName("User");
@@ -84,7 +84,7 @@ public class InitialSetupMigration {
 
     private User createAdmin(Authority adminAuthority, Authority userAuthority) {
         User adminUser = new User();
-        adminUser.setId("user-1");
+        //adminUser.setId("user-1"); comentado para ver correctamente el objectId en la BD
         adminUser.setLogin("admin");
         adminUser.setPassword("$2a$10$gSAhZrxMllrbgj/kkK9UceBPpChGWJA7SYIb1Mqo.n5aNLq1/oRrC");
         adminUser.setFirstName("admin");
@@ -101,7 +101,7 @@ public class InitialSetupMigration {
 
     private User createSupervisor(Authority supervisorAuthority, Authority adminAuthority) {
         User supervisorUser = new User();
-        supervisorUser.setId("user-3");
+        //supervisorUser.setId("user-3");
         supervisorUser.setLogin("supervisor");
         supervisorUser.setPassword("$2a$10$gSAhZrxMllrbgj/kkK9UceBPpChGWJA7SYIb1Mqo.n5aNLq1/oRrC");
         supervisorUser.setFirstName("supervisor");
