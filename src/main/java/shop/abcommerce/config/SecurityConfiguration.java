@@ -38,20 +38,30 @@ public class SecurityConfiguration {
             .authorizeHttpRequests(authz ->
                 // prettier-ignore
                 authz
+                    // Endpoints públicos (no requieren autenticación)
                     .requestMatchers(HttpMethod.POST, "/api/authenticate").permitAll()
                     .requestMatchers(HttpMethod.GET, "/api/authenticate").permitAll()
                     .requestMatchers("/api/register").permitAll()
                     .requestMatchers("/api/activate").permitAll()
                     .requestMatchers("/api/account/reset-password/init").permitAll()
                     .requestMatchers("/api/account/reset-password/finish").permitAll()
+                    .requestMatchers("/tienda/**").permitAll()
+                    // Admin endpoints (solo ADMIN)
                     .requestMatchers("/api/admin/**").hasAuthority(AuthoritiesConstants.ADMIN)
-                    .requestMatchers("/api/**").authenticated()
+                    // Endpoints públicos de Swagger/OpenAPI (solo ADMIN en producción)
                     .requestMatchers("/v3/api-docs/**").hasAuthority(AuthoritiesConstants.ADMIN)
+                    .requestMatchers("/swagger-ui/**").hasAuthority(AuthoritiesConstants.ADMIN)
+                    // 📌 Endpoints de management (solo ADMIN)
                     .requestMatchers("/management/health").permitAll()
                     .requestMatchers("/management/health/**").permitAll()
                     .requestMatchers("/management/info").permitAll()
                     .requestMatchers("/management/prometheus").permitAll()
                     .requestMatchers("/management/**").hasAuthority(AuthoritiesConstants.ADMIN)
+                    // ⚠️ IMPORTANTE: Cambio de authenticated() a permitAll()
+                    // para que @PreAuthorize maneje los permisos
+                    .requestMatchers("/api/**").permitAll()
+                    // Cualquier otra petición requiere autenticación
+                    .anyRequest().authenticated()
             )
             .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .exceptionHandling(exceptions ->

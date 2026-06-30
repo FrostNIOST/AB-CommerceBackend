@@ -14,9 +14,11 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import shop.abcommerce.repository.DocumentTypeRepository;
+import shop.abcommerce.security.AuthoritiesConstants;
 import shop.abcommerce.service.DocumentTypeService;
 import shop.abcommerce.service.dto.DocumentTypeDTO;
 import shop.abcommerce.web.rest.errors.BadRequestAlertException;
@@ -55,6 +57,7 @@ public class DocumentTypeResource {
      * @throws URISyntaxException if the Location URI syntax is incorrect.
      */
     @PostMapping("")
+    @PreAuthorize("hasAnyAuthority('" + AuthoritiesConstants.ADMIN + "', '" + AuthoritiesConstants.SUPERVISOR + "')")
     public ResponseEntity<DocumentTypeDTO> createDocumentType(@Valid @RequestBody DocumentTypeDTO documentTypeDTO)
         throws URISyntaxException {
         LOG.debug("REST request to save DocumentType : {}", documentTypeDTO);
@@ -78,6 +81,7 @@ public class DocumentTypeResource {
      * @throws URISyntaxException if the Location URI syntax is incorrect.
      */
     @PutMapping("/{id}")
+    @PreAuthorize("hasAnyAuthority('" + AuthoritiesConstants.ADMIN + "', '" + AuthoritiesConstants.SUPERVISOR + "')")
     public ResponseEntity<DocumentTypeDTO> updateDocumentType(
         @PathVariable(value = "id", required = false) final String id,
         @Valid @RequestBody DocumentTypeDTO documentTypeDTO
@@ -112,6 +116,7 @@ public class DocumentTypeResource {
      * @throws URISyntaxException if the Location URI syntax is incorrect.
      */
     @PatchMapping(value = "/{id}", consumes = { "application/json", "application/merge-patch+json" })
+    @PreAuthorize("hasAnyAuthority('" + AuthoritiesConstants.ADMIN + "', '" + AuthoritiesConstants.SUPERVISOR + "')")
     public ResponseEntity<DocumentTypeDTO> partialUpdateDocumentType(
         @PathVariable(value = "id", required = false) final String id,
         @NotNull @RequestBody DocumentTypeDTO documentTypeDTO
@@ -143,6 +148,15 @@ public class DocumentTypeResource {
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and the list of Document Types in body.
      */
     @GetMapping("")
+    @PreAuthorize(
+        "hasAnyAuthority('" +
+            AuthoritiesConstants.ADMIN +
+            "', '" +
+            AuthoritiesConstants.USER +
+            "', '" +
+            AuthoritiesConstants.SUPERVISOR +
+            "')"
+    )
     public ResponseEntity<List<DocumentTypeDTO>> getAllDocumentTypes(@org.springdoc.core.annotations.ParameterObject Pageable pageable) {
         LOG.debug("REST request to get a page of DocumentTypes");
         Page<DocumentTypeDTO> page = documentTypeService.findAll(pageable);
@@ -157,6 +171,15 @@ public class DocumentTypeResource {
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the documentTypeDTO, or with status {@code 404 (Not Found)}.
      */
     @GetMapping("/{id}")
+    @PreAuthorize(
+        "hasAnyAuthority('" +
+            AuthoritiesConstants.ADMIN +
+            "', '" +
+            AuthoritiesConstants.USER +
+            "', '" +
+            AuthoritiesConstants.SUPERVISOR +
+            "')"
+    )
     public ResponseEntity<DocumentTypeDTO> getDocumentType(@PathVariable("id") String id) {
         LOG.debug("REST request to get DocumentType : {}", id);
         Optional<DocumentTypeDTO> documentTypeDTO = documentTypeService.findOne(id);
@@ -170,6 +193,7 @@ public class DocumentTypeResource {
      * @return the {@link ResponseEntity} with status {@code 204 (NO_CONTENT)}.
      */
     @DeleteMapping("/{id}")
+    @PreAuthorize("hasAuthority('" + AuthoritiesConstants.ADMIN + "')")
     public ResponseEntity<Void> deleteDocumentType(@PathVariable("id") String id) {
         LOG.debug("REST request to delete DocumentType : {}", id);
         documentTypeService.delete(id);

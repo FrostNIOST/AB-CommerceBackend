@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AB-Commerce Website</title>
+    <!-- style css -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <!-- remix icon cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+    />
+    <!-- swiper slide cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-top">
+        <div class="nav-top-left nav-top-content">
+          <ul class="main-menu">
+            <li>
+              <span class="main-menu-text"
+                >English <i class="fa-solid fa-chevron-down"></i
+              ></span>
+              <ul class="sub-menu">
+                <li>
+                  <span>English</span>
+                </li>
+                <li>
+                  <span>Spanish</span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="main-menu">
+            <li>
+              <span class="main-menu-text"
+                >USD <i class="fa-solid fa-chevron-down"></i
+              ></span>
+              <ul class="sub-menu">
+                <li>
+                  <span>USD</span>
+                </li>
+                <li>
+                  <span>COP</span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <p>Entregas gratis en compras sobre $100</p>
+        </div>
+        <ul class="nav-top-right nav-top-content">
+          <li>
+            <i class="fa-solid fa-bolt"></i>
+            <a href="#">Flash Sale</a>
+          </li>
+          <li>
+            <a href="./about.html">Nosotros</a>
+          </li>
+          <li>
+            <a href="./contact.html">Contacto</a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav-middel">
+        <div class="logo">
+          <a href="index.html">
+            <h2>AB<span>Commerce</span></h2>
+          </a>
+        </div>
+        <div class="nav-middel-input-box">
+          <select>
+            <option>Categorías</option>
+            <option>Cámaras</option>
+            <option>Accesorios</option>
+            <option>Cámaras y lentes</option>
+            <option>Drones</option>
+            <option>Laptops</option>
+            <option>Videojuegos</option>
+          </select>
+          <input type="text" placeholder="Buscar productos" />
+          <button class="btn">
+            <a href="#">Buscar</a>
+          </button>
+        </div>
+        <div class="nav-middel-right">
+          <div class="nav-middel-right-content">
+            <a  href="./contact.html" class="nav-middel-right-icon">
+              <i class="ri-customer-service-line"></i>
+            </a>
+            <div class="nav-middel-right-info">
+              <span>¿Tiene preguntas?</span>
+              <span>+09 9987 7931</span>
+            </div>
+          </div>
+          <div class="nav-middel-right-content">
+            <a href="./myAccount.html" class="nav-middel-right-icon">
+              <i class="ri-user-3-line"></i>
+              <div class="nav-middel-right-info">
+                <span>Cuenta</span>
+                <span>Ingresar</span>
+              </div>
+            </a>
+          </div>
+          <div class="nav-middel-right-content">
+            <a href="./carts.html" class="nav-middel-right-icon">
+              <i class="ri-shopping-cart-2-line"></i>
+
+              <div class="nav-middel-right-info">
+                <span>Mi</span>
+                <span>Carrito</span>
+              </div>
+            </a>
+          </div>
+          <div class="nav-middel-right-content">
+                <i class="ri-menu-line" id="open-menu"></i>
+            </div>
+        </div>
+        
+      </div>
+      <div class="nav-bottom">
+            <div class="nav-bottom-left">
+                <div class="categories">
+                    <div class="categories-text">
+                        <i class="ri-menu-line"></i>
+                        <span>Categorías</span>
+                    </div>
+                    <i class="ri-arrow-down-s-line"></i>
+                </div>
+
+                <ul class="categories-item-menu">
+                    <a href="./product.html">
+                        <li>
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                            <span>Celulares</span>
+                        </li>
+                    </a>
+
+                    <a href="./product.html">
+                        <li>
+                            <i class="fa-solid fa-laptop"></i>
+                            <span>Laptops</span>
+                        </li>
+                    </a>
+
+                    <a href="./product.html">
+                        <li>
+                            <i class="fa-solid fa-camera-retro"></i>
+                            <span>Cámaras</span>
+                        </li>
+                    </a>
+
+                    <a href="./product.html">
+                        <li>
+                            <i class="fa-solid fa-headphones-simple"></i>
+                            <span>Audífonos</span>
+                        </li>
+                    </a>
+
+                    <a href="./product.html">
+                        <li>
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span>PC Gaming</span>
+                        </li>
+                    </a>
+
+                    <a href="./product.html">
+                        <li>
+                            <i class="fa-solid fa-tablet"></i>
+                            <span>Tablets</span>
+                        </li>
+                    </a>
+
+                    <a href="./product.html">
+                        <li>
+                            <i class="fa-solid fa-tv"></i>
+                            <span>Televisiones</span>
+                        </li>
+                    </a>
+
+                </ul>
+            </div>
+
+            <ul class="nav-bottom-menu">
+              <li>
+                <a href="index.html">Inicio</a>
+              </li>
+              <li>
+                <a href="./product.html">Laptops</a>
+              </li>
+              <li>
+                <a href="./product.html">Celulares</a>
+              </li>
+              <li>
+                <a href="./product.html">Audífonos</a>
+              </li>
+              <li>
+                <a href="./product.html">Cámaras</a>
+              </li>
+            </ul>
+            <a href="./wishlist.html">
+              <div class="vislist">
+                <i class="fa-regular fa-heart"></i>
+                <div class="today-deals">
+                  <span>Promoción de</span>
+                  <span>hoy</span>
+                </div>
+              </div>
+            </a>
+            <i class="ri-close-large-fill" id="close-menu"></i>
+        </div>
+    </nav>
+    
+    <div class="page-section">
+      <h2>
+        <a href="./index.html">Inicio /</a>
+        <p id="product-name-title">Product Details</p>
+      </h2>
+    </div>
+    
+    <section class="product-details-wrapper">
+      <!--
+      <div class="product-container">
+        <div class="product-img">
+          <img src="./Image/best_selling_product1.jpg" alt="imagen de producto" />
+        </div>
+        <div class="product-details">
+          <div class="product-title">
+            <h2>samsung galaxy</h2>
+            <h1>amsung Galaxy A54 5G, 6.4 512GB</h1>
+          </div>
+          <div class="rating">
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-half-fill"></i>
+            <span>(4.5)</span>
+          </div>
+          <div class="price">
+            <p class="red">$949.99</p>
+            <p class="lined">$699.99</p>
+            <p class="off">33%</p>
+          </div>
+          <div class="btncon">
+            <a href="./carts.html" class="addtocartbtn">Cart</a>
+            <a href="./carts.html" class="addtocartbtn addtowishbtn">Add To Wishlist</a>
+          </div>
+          <div class="info">
+            <p>
+              Fast charging 18w, 50% in 30 min USB Power Delivery 2.0nQi
+              wireless charging
+            </p>
+          </div>
+          <div class="delivery">
+            <ul>
+              <li>Estimated delivery time 14-30 days</li>
+              <li>18 months warranty at genuine warranty center</li>
+              <li>Use coupon SS23 to get extra $23 off (only this product)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+      <div class="product-detail-container">
+        <div class="product-detail-btn">
+          <button data-target="about-sec">Product Details</button>
+          <button data-target="additional-sec">Additional Information</button>
+          <button data-target="reviews-sec">Reviews</button>
+          <button data-target="shipping-sec">Shipping & Return</button>
+        </div>
+    
+        <div class="product-content-container">
+          <div class="product-detail" id="about-sec">
+            <h1>About This Item</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam
+              nihil quibusdam accusamus assumenda itaque earum? Dolore illo
+              dolorum corrupti nobis quibusdam neque qui tempore accusamus
+              beatae placeat. Corrupti, nisi culpa.
+            </p>
+            <p>
+              <span>What It Does:</span>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, unde? Maxime cupiditate beatae rerum.
+              Sapiente eius numquam optio fuga quis velit nesciunt facere laborum sunt porro eum, animi totam? Quam?
+            </p>
+            <p>
+              <span>Dual Purpose:</span>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam quaerat ullam dolor magni mollitia impedit
+              reiciendis blanditiis modi quos ab omnis autem, voluptatibus dolorem assumenda iure, quam culpa quae
+              accusamus?
+            </p>
+            <p>
+              <span>Who Its For:</span>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora, ipsum odio. Fuga nam ullam cum
+              temporibus? Tempore temporibus quaerat veritatis aliquid, itaque unde ipsa consequuntur nulla nemo ipsam,
+              atque doloremque.
+            </p>
+            <p>
+              <span>How It Works:</span>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ut reiciendis qui at perferendis doloremque
+              voluptas dolore nulla omnis rem distinctio, laboriosam facere aut iste vitae, praesentium ipsum. Cupiditate,
+              sint.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem in, laboriosam ut, laudantium adipisci
+              recusandae commodi eligendi veritatis, enim asperiores suscipit nostrum rem alias quos minus explicabo
+              reprehenderit debitis praesentium!
+            </p>
+          </div>
+          <div class="product-detail additional-detail" id="additional-sec">
+            <p>ram<span>16 GB RAM</span></p>
+            <p>harddrive <span>256 GB SSD</span>
+            <p>screenSize <span>13.3 inches</span></p>
+            </p>
+          </div>
+          <div class="product-detail reviews" id="reviews-sec">
+            <div class="reviews-contact">
+              <h3>1 review for Wow Skin Science Moroccan Argan Oil Shampoo</h3>
+              <div class="reviews-contact-card-container">
+                <div class="reviews-card">
+                  <h1><span>5.00</span></h1>
+                </div>
+                <ul class="reviews-star">
+                  <li>
+                    <p>5</p>
+                    <i class="ri-star-fill"></i>
+                    <div class="star-li"></div>
+                    <p>(0)</p>
+                  </li>
+    
+                  <li>
+                    <p>4</p>
+                    <i class="ri-star-fill"></i>
+                    <div class="star-li"></div>
+                    <p>(0)</p>
+                  </li>
+    
+                  <li>
+                    <p>3</p>
+                    <i class="ri-star-fill"></i>
+                    <div class="star-li"></div>
+                    <p>(0)</p>
+                  </li>
+    
+                  <li>
+                    <p>2</p>
+                    <i class="ri-star-fill"></i>
+                    <div class="star-li"></div>
+                    <p>(0)</p>
+                  </li>
+    
+                  <li>
+                    <p>1</p>
+                    <i class="ri-star-fill"></i>
+                    <div class="star-li"></div>
+                    <p>(0)</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="client-rev">
+                <div class="client-rev-card">
+                  <div class="client-rev-card-img">
+                    <img src="./Image/avatar-3.jpg" alt="">
+                  </div>
+                  <div class="client-rev-card-info">
+                    <h5>John Doe</h5>
+                    <p>Verified Buyer</p>
+                    <p>Was a packaged well and seems line a good quality product. Perfect for gifting</p>
+                    <div class="rev-card-star">
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-half-fill"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="rev-form">
+              <h3>Add a review</h3>
+              <form action="">
+                <p>Your email address will not be published. Required fields are maked *</p>
+                <p>Your Rating</p>
+                <div class="star-rating">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                </div>
+                <input type="text" placeholder="Review title">
+                <input type="text" placeholder="Your Review">
+                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Email">
+                <span>
+                  <input type="checkbox">
+                  <p>Save my name, email, and website in this browser for the next time I comment.</p>
+                </span>
+              </form>
+              <button>Submit</button>
+            </div>
+          </div>
+          <div class="product-detail shipping" id="shipping-sec">
+            <h1>shipping policy</h1>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt dolor quod, temporibus consequatur
+              accusamus enim
+              saepe sapiente ut exercitationem modi maxime dignissimos, eaque facilis explicabo voluptatum nostrum error
+              itaque
+              magnam.
+            </p>
+            <ul>
+              <li>
+                <p>Dispatch:within 24 Hours</p>
+              </li>
+              <li>
+                <p>Free shipping across all products on a minimum purchase of $99.</p>
+              </li>
+              <li>
+                <p>International delivery time 5 to 7 business days</p>
+              </li>
+              <li>
+                <p>Cash on delivery might be available</p>
+              </li>
+              <li>
+                <p>Easy 30 days returns and exchanges</p>
+              </li>
+            </ul>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus obcaecati quia minus nobis distinctio
+              itaque,
+              ut, rem modi iure aliquam quibusdam nam molestiae excepturi suscipit tempora officiis! Voluptate, facilis
+              atque!
+            </p>
+            <h1>Returns Policy</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos soluta quasi quisquam, accusantium aliquid
+              exercitationem deserunt consequuntur eligendi laboriosam sit ipsa excepturi aut neque. Vel ullam consectetur
+              repellendus iste exercitationem.</p>
+            <ol>
+              <li>
+                <p>Returned items must be unused, undamaged, and in the same conditions as received.</p>
+              </li>
+              <li>
+                <p>Original tags, labels, and packaging must be intact and included with the returned item.</p>
+              </li>
+              <li>
+                <p>Proof of purchase, such as your order confirmation or receipt, is required for all returns.</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      -->
+    </section>
+  
+    <!-- footer start -->
+         <footer>
+          <div class="news-letter-wrapper">
+            <div class="news-letter">
+              <h3>Subscribete para recibir novedades y 20% de descuento</h3>
+              <div>
+                <input type="text" placeholder="Tu dirección de correo electrónico">
+                <button class="btn">Subscribete</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-wrapper">
+            <div class="features">
+              <i class="ri-truck-line"></i>
+              <p><strong>Envío gratis</strong>Por compras superiores a $100</p>
+            </div>
+            <div class="features">
+              <i class="ri-money-dollar-circle-line"></i>
+              <p><strong>Devoluciones</strong>Garantizadas antes de 7 días</p>
+            </div>
+            <div class="features">
+              <i class="ri-customer-service-line"></i>
+              <p><strong>Soporte 24/7</strong>Soporte 24 horas todos los días</p>
+            </div>
+            <div class="features">
+              <i class="ri-customer-service-line"></i>
+              <p><strong>Pagos</strong>pagos 100% seguros</p>
+            </div>
+          </div>
+          <div class="footer">
+            <div class="footer-link">
+              <div class="logo">
+                <a href="./index.html">
+                  <h2>AB<span>-Commerce</span></h2>
+                </a>
+              </div>
+              <p>Encuentra nuestros almacenes</p>
+              <p>Mira <a href="#">nuestras tiendas</a></p>
+              <p>email@gmail.com</p>
+              <p><b>+57 1234567897</b></p>
+              <div class="social">
+                <i class="ri-instagram-line"></i>
+                <i class="ri-facebook-line"></i>
+                <i class="ri-twitter-x-line"></i>
+                <i class="ri-pinterest-line"></i>
+              </div>
+            </div>
+            <div class="footer-link">
+              <h3>Nosotros</h3>
+              <p><a href="#">Politicas</a></p>
+              <p><a href="#">Blog</a></p>
+              <p><a href="#">Noticias</a></p>
+              <p><a href="#">Centro de envíos</a></p>
+              <p><a href="#">Advertencias</a></p>
+              <p><a href="#">Inversores</a></p>
+            </div>
+
+            <div class="footer-link">
+              <h3>Soporte</h3>
+              <p><a href="#">Centro de soporte</a></p>
+              <p><a href="#">Gerencia</a></p>
+              <p><a href="#">Servicios</a></p>
+              <p><a href="#">Envíos internacionales</a></p>
+              <p><a href="#">Seguridad</a></p>
+              <p><a href="#">Contacto</a></p>
+            </div>
+
+            <div class="footer-link">
+              <h3>Ordenes</h3>
+              <p><a href="#">Ordenes aprobadas</a></p>
+              <p><a href="#">Recepción y entrega</a></p>
+              <p><a href="#">Devoluciones</a></p>
+              <p><a href="#">Cambios</a></p>
+              <p><a href="#">Desarrolladores</a></p>
+              <p><a href="#">Tarjetas de regalo</a></p>
+            </div>
+
+          </div>
+          <div class="tranding-tag">
+            <h3>Etiquetas de tendencia</h3>
+            <div class="tags">
+              <span>Accesorios</span>
+              <span>Apple iphone</span>
+              <span>Cámara & video</span>
+              <span>Celular</span>
+              <span>Computadores de escritorio</span>
+              <span>Electronica</span>
+              <span>Videojuegos</span>
+              <span>Dispositivos de juegos</span>
+              <span>Audífonos</span>
+              <span>Iwatch</span>
+              <span>Productos para niños</span>
+              <span>Laptops</span>
+              <span>Mobiles & Tablets</span>
+            </div>
+          </div>
+          <p class="copyright">© Grupo 2. All Rights Reserved.</p>
+         </footer>
+        <!-- footer end -->
+    <!-- script js -->
+    <script src="./script.js"></script>
+    <!-- swiper slide cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+    <!-- products data -->
+    <script src="./data.js"></script>
+  
+    <script>
+
+      function getQueryParam(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+      };
+
+      const pId = getQueryParam('productId');
+      const pCategory = getQueryParam('productCategory');
+
+      function displayDetails(id,category){
+        var vProductCategory = products.find(p => p.category == pCategory);
+        
+        if(vProductCategory){
+          var vProduct = vProductCategory.products.find(p => p.productId == pId);
+          
+          document.getElementById('product-name-title').innerText = `${vProductCategory.category} / ${vProduct.name}`;
+
+          const container = document.querySelector('.product-details-wrapper')
+
+          container.innerHTML=`
+           <div class="product-container">
+        <div class="product-img">
+          <img src="${vProduct.image}" alt="${vProduct.name}" />
+        </div>
+        <div class="product-details">
+          <div class="product-title">
+            <h2>${vProduct.title}</h2>
+            <h1>${vProduct.name}</h1>
+          </div>
+          <div class="rating">
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-half-fill"></i>
+            <span>(4.5)</span>
+          </div>
+          <div class="price">
+            <p class="red">${vProduct.lessprice}</p>
+            <p class="lined">${vProduct.price}</p>
+            <p class="off">${vProduct.off}</p>
+          </div>
+          <div class="btncon">
+            <a href="./carts.html" class="addtocartbtn" onClick="passDataToCart('${id}','${category}')">Carrito</a>
+            <a href="./wishlist.html" class="addtocartbtn addtowishbtn" onClick="passDataToWish('${id}','${category}')">Agregar Wishlist</a>
+          </div>
+          <div class="info">
+            <p>
+              Carga rápida de 18 W, 50 % en 30 minutos con USB Power Delivery 2.0 nQi
+              Carga inalámbrica
+            </p>
+          </div>
+          <div class="delivery">
+            <ul>
+              <li>Plazo de entrega estimado: 14-30 días.</li>
+              <li>18 meses de garantía en el centro de garantía oficial.</li>
+              <li>Usa el cupón SS23 para obtener un descuento adicional de $23 (solo en este producto).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+      <div class="product-detail-container">
+        <div class="product-detail-btn">
+          <button data-target="about-sec">Detalles del producto</button>
+          <button data-target="additional-sec">información adicional</button>
+          <button data-target="reviews-sec">Reseñas</button>
+          <button data-target="shipping-sec">Envío y devolución</button>
+        </div>
+    
+        <div class="product-content-container">
+          <div class="product-detail" id="about-sec">
+            <h1>Acerca de este artículo</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam
+              nihil quibusdam accusamus assumenda itaque earum? Dolore illo
+              dolorum corrupti nobis quibusdam neque qui tempore accusamus
+              beatae placeat. Corrupti, nisi culpa.
+            </p>
+            <p>
+              <span>¿Qué hace?:</span>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, unde? Maxime cupiditate beatae rerum.
+              Sapiente eius numquam optio fuga quis velit nesciunt facere laborum sunt porro eum, animi totam? Quam?
+            </p>
+            <p>
+              <span>Doble uso:</span>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam quaerat ullam dolor magni mollitia impedit
+              reiciendis blanditiis modi quos ab omnis autem, voluptatibus dolorem assumenda iure, quam culpa quae
+              accusamus?
+            </p>
+            <p>
+              <span>¿Para quién es?:</span>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora, ipsum odio. Fuga nam ullam cum
+              temporibus? Tempore temporibus quaerat veritatis aliquid, itaque unde ipsa consequuntur nulla nemo ipsam,
+              atque doloremque.
+            </p>
+            <p>
+              <span>Cómo funciona:</span>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ut reiciendis qui at perferendis doloremque
+              voluptas dolore nulla omnis rem distinctio, laboriosam facere aut iste vitae, praesentium ipsum. Cupiditate,
+              sint.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem in, laboriosam ut, laudantium adipisci
+              recusandae commodi eligendi veritatis, enim asperiores suscipit nostrum rem alias quos minus explicabo
+              reprehenderit debitis praesentium!
+            </p>
+          </div>
+          <div class="product-detail additional-detail" id="additional-sec">
+            <p>ram<span>${vProduct.specification.ram}</span></p>
+            <p>Capacidad disco <span>${vProduct.specification.harddrive}</span>
+            <p>Tamaño de pantalla <span>${vProduct.specification.screenSize}</span></p>
+            </p>
+          </div>
+          <div class="product-detail reviews" id="reviews-sec">
+            <div class="reviews-contact">
+              <h3>review for Wow Skin Science Moroccan Argan Oil Shampoo</h3>
+              <div class="reviews-contact-card-container">
+                <div class="reviews-card">
+                  <h1><span>5.00</span></h1>
+                </div>
+                <ul class="reviews-star">
+                  <li>
+                    <p>5</p>
+                    <i class="ri-star-fill"></i>
+                    <div class="star-li"></div>
+                    <p>(0)</p>
+                  </li>
+    
+                  <li>
+                    <p>4</p>
+                    <i class="ri-star-fill"></i>
+                    <div class="star-li"></div>
+                    <p>(0)</p>
+                  </li>
+    
+                  <li>
+                    <p>3</p>
+                    <i class="ri-star-fill"></i>
+                    <div class="star-li"></div>
+                    <p>(0)</p>
+                  </li>
+    
+                  <li>
+                    <p>2</p>
+                    <i class="ri-star-fill"></i>
+                    <div class="star-li"></div>
+                    <p>(0)</p>
+                  </li>
+    
+                  <li>
+                    <p>1</p>
+                    <i class="ri-star-fill"></i>
+                    <div class="star-li"></div>
+                    <p>(0)</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="client-rev">
+                <div class="client-rev-card">
+                  <div class="client-rev-card-img">
+                    <img src="./Image/avatar-3.jpg" alt="">
+                  </div>
+                  <div class="client-rev-card-info">
+                    <h5>John Doe</h5>
+                    <p>Verified Buyer</p>
+                    <p>Was a packaged well and seems line a good quality product. Perfect for gifting</p>
+                    <div class="rev-card-star">
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-half-fill"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="rev-form">
+              <h3>Add a review</h3>
+              <form action="">
+                <p>Your email address will not be published. Required fields are maked *</p>
+                <p>Your Rating</p>
+                <div class="star-rating">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                </div>
+                <input type="text" placeholder="Review title">
+                <input type="text" placeholder="Your Review">
+                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Email">
+                <span>
+                  <input type="checkbox">
+                  <p>Save my name, email, and website in this browser for the next time I comment.</p>
+                </span>
+              </form>
+              <button>Submit</button>
+            </div>
+          </div>
+          <div class="product-detail shipping" id="shipping-sec">
+            <h1>política de envío</h1>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt dolor quod, temporibus consequatur
+              accusamus enim
+              saepe sapiente ut exercitationem modi maxime dignissimos, eaque facilis explicabo voluptatum nostrum error
+              itaque
+              magnam.
+            </p>
+            <ul>
+              <li>
+                <p>Envío: en 24 horas</p>
+              </li>
+              <li>
+                <p>Envío gratuito en todos los productos con una compra mínima de 99 dólares.</p>
+              </li>
+              <li>
+                <p>Plazo de entrega internacional: de 5 a 7 días hábiles</p>
+              </li>
+              <li>
+                <p>Es posible que esté disponible el pago contra reembolso.</p>
+              </li>
+              <li>
+                <p>Devoluciones y cambios fáciles en 30 días</p>
+              </li>
+            </ul>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus obcaecati quia minus nobis distinctio
+              itaque,
+              ut, rem modi iure aliquam quibusdam nam molestiae excepturi suscipit tempora officiis! Voluptate, facilis
+              atque!
+            </p>
+            <h1>Política de devoluciones</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos soluta quasi quisquam, accusantium aliquid
+              exercitationem deserunt consequuntur eligendi laboriosam sit ipsa excepturi aut neque. Vel ullam consectetur
+              repellendus iste exercitationem.</p>
+            <ol>
+              <li>
+                <p>Returned items must be unused, undamaged, and in the same conditions as received.</p>
+              </li>
+              <li>
+                <p>Original tags, labels, and packaging must be intact and included with the returned item.</p>
+              </li>
+              <li>
+                <p>Proof of purchase, such as your order confirmation or receipt, is required for all returns.</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+`;
+        }
+      }
+      displayDetails(pId,pCategory);
+
+      let cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
+      let wishProducts = JSON.parse(localStorage.getItem('wishProducts')) || [];
+
+      function passDataToCart(id,category){
+        const cProduct = {
+          productId: id,
+          productCategory: category,
+        };
+        cartProducts.push(cProduct);
+
+        localStorage.setItem('cartProducts', JSON.stringify(cartProducts));
+
+        alert("Product added to cart!");
+
+        console.log(cartProducts);
+      }
+
+      function passDataToWish(id,category){
+        const cProduct = {
+          productId: id,
+          productCategory: category,
+        };
+        wishProducts.push(cProduct);
+
+        localStorage.setItem('wishProducts', JSON.stringify(wishProducts));
+
+        alert("Product added to Wish!");
+
+        console.log(wishProducts);
+      }
+
+      const activities_box = document.querySelectorAll('.product-detail-btn button');
+      const activities_container = document.querySelectorAll('.product-detail');
+
+      activities_container.forEach((container, index) => {
+        container.style.display = 'none';
+      });
+
+      activities_container[0].style.display = 'flex';
+
+      activities_box.forEach((btn, btnindex) => {
+        btn.addEventListener('click', () => {
+
+          activities_container.forEach((container) => {
+            container.style.display = 'none';
+          });
+          activities_container[btnindex].style.display = 'flex';
+        })
+      })
+
+    </script>
+  
+  </body>
+</html>

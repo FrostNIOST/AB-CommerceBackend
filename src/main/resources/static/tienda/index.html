@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AB-Commerce Website</title>
+    <!-- style css -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <!-- remix icon cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+    />
+    <!-- swiper slide cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css"
+    />
+    <!-- bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav>
+      <div class="nav-top">
+        <div class="nav-top-left nav-top-content">
+          <ul class="main-menu">
+            <li>
+              <span class="main-menu-text"
+                >English <i class="fa-solid fa-chevron-down"></i
+              ></span>
+              <ul class="sub-menu">
+                <li>
+                  <span>English</span>
+                </li>
+                <li>
+                  <span>Spanish</span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="main-menu">
+            <li>
+              <span class="main-menu-text"
+                >USD <i class="fa-solid fa-chevron-down"></i
+              ></span>
+              <ul class="sub-menu">
+                <li>
+                  <span>USD</span>
+                </li>
+                <li>
+                  <span>COP</span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <p>Entregas gratis en compras sobre $100</p>
+        </div>
+        <ul class="nav-top-right nav-top-content">
+          <li>
+            <i class="fa-solid fa-bolt"></i>
+            <a href="#">Flash Sale</a>
+          </li>
+          <li>
+            <a href="./about.html">Nosotros</a>
+          </li>
+          <li>
+            <a href="./contact.html">Contacto</a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav-middel">
+        <div class="logo">
+          <a href="index.html">
+            <h2>AB<span>Commerce</span></h2>
+          </a>
+        </div>
+        <div class="nav-middel-input-box">
+          <select>
+            <option>Categorías</option>
+            <option>Cámaras</option>
+            <option>Accesorios</option>
+            <option>Cámaras y lentes</option>
+            <option>Drones</option>
+            <option>Laptops</option>
+            <option>Videojuegos</option>
+          </select>
+          <input type="text" placeholder="Buscar productos" />
+          <button class="btn">
+            <a href="#">Buscar</a>
+          </button>
+        </div>
+        <div class="nav-middel-right">
+          <div class="nav-middel-right-content">
+            <a href="./contact.html" class="nav-middel-right-icon">
+              <i class="ri-customer-service-line"></i>
+            </a>
+            <div class="nav-middel-right-info">
+              <span>¿Tiene preguntas?</span>
+              <span>+09 9987 7931</span>
+            </div>
+          </div>
+          <div class="nav-middel-right-content">
+            <a href="./myAccount.html" class="nav-middel-right-icon">
+              <i class="ri-user-3-line"></i>
+              <div class="nav-middel-right-info">
+                <span>Cuenta</span>
+                <span>Ingresar</span>
+              </div>
+            </a>
+          </div>
+          <div class="nav-middel-right-content">
+            <a href="./carts.html" class="nav-middel-right-icon">
+              <i class="ri-shopping-cart-2-line"></i>
+
+              <div class="nav-middel-right-info">
+                <span>Mi</span>
+                <span>Carrito</span>
+              </div>
+            </a>
+          </div>
+          <div class="nav-middel-right-content">
+            <i class="ri-menu-line" id="open-menu"></i>
+          </div>
+        </div>
+      </div>
+      <div class="nav-bottom">
+        <div class="nav-bottom-left">
+          <div class="categories">
+            <div class="categories-text">
+              <i class="ri-menu-line"></i>
+              <span>Categorías</span>
+            </div>
+            <i class="ri-arrow-down-s-line"></i>
+          </div>
+
+          <ul class="categories-item-menu">
+            <a href="./product.html">
+              <li>
+                <i class="fa-solid fa-mobile-screen-button"></i>
+                <span>Celulares</span>
+              </li>
+            </a>
+
+            <a href="./product.html">
+              <li>
+                <i class="fa-solid fa-laptop"></i>
+                <span>Laptops</span>
+              </li>
+            </a>
+
+            <a href="./product.html">
+              <li>
+                <i class="fa-solid fa-camera-retro"></i>
+                <span>Cámaras</span>
+              </li>
+            </a>
+
+            <a href="./product.html">
+              <li>
+                <i class="fa-solid fa-headphones-simple"></i>
+                <span>Audífonos</span>
+              </li>
+            </a>
+
+            <a href="./product.html">
+              <li>
+                <i class="fa-solid fa-gamepad"></i>
+                <span>PC Gaming</span>
+              </li>
+            </a>
+
+            <a href="./product.html">
+              <li>
+                <i class="fa-solid fa-tablet"></i>
+                <span>Tablets</span>
+              </li>
+            </a>
+
+            <a href="./product.html">
+              <li>
+                <i class="fa-solid fa-tv"></i>
+                <span>Televisiones</span>
+              </li>
+            </a>
+          </ul>
+        </div>
+
+        <ul class="nav-bottom-menu">
+          <li>
+            <a href="index.html">Inicio</a>
+          </li>
+          <li>
+            <a href="./product.html">Laptops</a>
+          </li>
+          <li>
+            <a href="./product.html">Celulares</a>
+          </li>
+          <li>
+            <a href="./product.html">Audífonos</a>
+          </li>
+          <li>
+            <a href="./product.html">Cámaras</a>
+          </li>
+        </ul>
+        <a href="./wishlist.html">
+          <div class="vislist">
+            <i class="fa-regular fa-heart"></i>
+            <div class="today-deals">
+              <span>Promoción de</span>
+              <span>hoy</span>
+            </div>
+          </div>
+        </a>
+        <i class="ri-close-large-fill" id="close-menu"></i>
+      </div>
+    </nav>
+    <!-- hero start -->
+    <section class="hero">
+      <div class="swiper hero-ctg-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="product-ctg-item">
+              <img src="./Image/icon-phone.png" alt="" />
+              <h4>Celulares</h4>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="product-ctg-item">
+              <img src="./Image/icon-laptops.png" alt="" />
+              <h4>Laptops</h4>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="product-ctg-item">
+              <img src="./Image/icon-games.png" alt="" />
+              <h4>Videojuegos</h4>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="product-ctg-item">
+              <img src="./Image/icon-television.png" alt="" />
+              <h4>Televisiones</h4>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="product-ctg-item">
+              <img src="./Image/icon-speaker.png" alt="" />
+              <h4>Parlantes</h4>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="product-ctg-item">
+              <img src="./Image/icon-headphone.png" alt="" />
+              <h4>Audífonos</h4>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="product-ctg-item">
+              <img src="./Image/icon-laptops.png" alt="" />
+              <h4>Laptops</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper hero-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="hero-item hero-item1">
+              <div class="hero-content section-title">
+                <span class="hero-text">Oferta del dia</span>
+                <h2>Descuentos en Ipads <span>mira las ofertas</span></h2>
+                <p>Envíos gratis</p>
+                <h6>Por <span class="price">$499.99</span></h6>
+                <button type="button" class="btn btn-primary">Comprar ahora</button>
+              </div>
+              <div class="hero-image section-image">
+                <img src="./Image/slide1-ipad.png" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="hero-item hero-item2">
+              <div class="hero-content section-title">
+                <span class="hero-text">Oferta fin de semana</span>
+                <h2>Lo ultimo <span>Lo mejor</span></h2>
+                <p>Increíbles descuentos</p>
+                <h6>Por <span class="price">$399.99</span></h6>
+                <button class="btn">
+                  <a href="#">Comprar ahora</a>
+                </button>
+              </div>
+              <div class="hero-image section-image">
+                <img src="./Image/slide1-watches.png" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="hero-item hero-item3">
+              <div class="hero-content section-title">
+                <span class="hero-text">Oferta fin de semana</span>
+                <h2>Nuevos productos <span>lo mejor</span></h2>
+                <p>Increíbles descuentos</p>
+                <h6>por <span class="price">$399.99</span></h6>
+                <button class="btn">
+                  <a href="#">Comprar ahora</a>
+                </button>
+              </div>
+              <div class="hero-image section-image">
+                <img src="./Image/slide1-iphone.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <!-- hero end -->
+    <!-- banner start -->
+    <section class="banner-wrapper">
+      <div class="sale-top">
+        <small>Audífonos exclusivos</small>
+        <h1>Descuento 50% en audífonos</h1>
+        <button class="btn">Comprar ahora</button>
+      </div>
+      <div class="sale-bottom">
+        <div class="banner banner1">
+          <small>Tablets exclusivas</small>
+          <h1>Descuento 50% en tablets</h1>
+          <p>Super oferta</p>
+        </div>
+
+        <div class="banner banner2">
+          <small>Nuevos productos</small>
+          <h1>Precios de lanzamiento</h1>
+          <p>Super oferta</p>
+        </div>
+
+        <div class="banner banner3">
+          <small>Nuevos productos</small>
+          <h1>Precios de lanzamiento</h1>
+          <p>Super oferta</p>
+        </div>
+
+        <div class="banner banner4">
+          <small>Nuevos productos</small>
+          <h1>Precios de lanzamiento</h1>
+          <p>Super oferta</p>
+        </div>
+      </div>
+    </section>
+    <!-- banner end -->
+    <!-- best seller start -->
+    <section class="best-seller">
+      <div class="heading">
+        <h2>Mas vendidos</h2>
+        <div class="side-links">
+          <h4>Celulares</h4>
+          <h4>Laptops</h4>
+          <h4>Iwatchs</h4>
+          <h4>Accesorios</h4>
+        </div>
+      </div>
+
+      <div class="card-container">
+        <!-- dynamic cards -->
+      </div>
+    </section>
+    <!-- best seller end -->
+    <!-- brands start -->
+    <section class="brand">
+      <div class="swiper brand-swiper">
+        <div class="swiper-wrapper">
+          <!-- slide 1 -->
+          <div class="swiper-slide">
+            <div class="brand-image section-image">
+              <img src="./Image/samsung.png" alt="" />
+            </div>
+          </div>
+
+          <!-- slide 2 -->
+          <div class="swiper-slide">
+            <div class="brand-image section-image">
+              <img src="./Image/sanyo.png" alt="" />
+            </div>
+          </div>
+
+          <!-- slide 3 -->
+          <div class="swiper-slide">
+            <div class="brand-image section-image">
+              <img src="./Image/oppo.png" alt="" />
+            </div>
+          </div>
+
+          <!-- slide 4 -->
+          <div class="swiper-slide">
+            <div class="brand-image section-image">
+              <img src="./Image/dell.png" alt="" />
+            </div>
+          </div>
+
+          <!-- slide 5 -->
+          <div class="swiper-slide">
+            <div class="brand-image section-image">
+              <img src="./Image/lenovo.png" alt="" />
+            </div>
+          </div>
+
+          <!-- slide 6 -->
+          <div class="swiper-slide">
+            <div class="brand-image section-image">
+              <img src="./Image/panasonic.png" alt="" />
+            </div>
+          </div>
+
+          <!-- slide 7 -->
+          <div class="swiper-slide">
+            <div class="brand-image section-image">
+              <img src="./Image/sony-1.png" alt="" />
+            </div>
+          </div>
+
+          <!-- slide 8 -->
+          <div class="swiper-slide">
+            <div class="brand-image section-image">
+              <img src="./Image/asus.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- brands end -->
+    <!-- footer start -->
+    <footer>
+      <div class="news-letter-wrapper">
+        <div class="news-letter">
+          <h3>Subscribete para recibir novedades y 20% de descuento</h3>
+          <div>
+            <input
+              type="text"
+              placeholder="Tu dirección de correo electrónico"
+            />
+            <button class="btn">Subscribete</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="feature-wrapper">
+        <div class="features">
+          <i class="ri-truck-line"></i>
+          <p><strong>Envío gratis</strong>Por compras superiores a $100</p>
+        </div>
+        <div class="features">
+          <i class="ri-money-dollar-circle-line"></i>
+          <p><strong>Devoluciones</strong>Garantizadas antes de 7 días</p>
+        </div>
+        <div class="features">
+          <i class="ri-customer-service-line"></i>
+          <p><strong>Soporte 24/7</strong>Soporte 24 horas todos los días</p>
+        </div>
+        <div class="features">
+          <i class="ri-customer-service-line"></i>
+          <p><strong>Pagos</strong>pagos 100% seguros</p>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="footer-link">
+          <div class="logo">
+            <a href="./index.html">
+              <h2>AB<span>-Commerce</span></h2>
+            </a>
+          </div>
+          <p>Encuentra nuestros almacenes</p>
+          <p>Mira <a href="#">nuestras tiendas</a></p>
+          <p>email@gmail.com</p>
+          <p><b>+57 1234567897</b></p>
+          <div class="social">
+            <i class="ri-instagram-line"></i>
+            <i class="ri-facebook-line"></i>
+            <i class="ri-twitter-x-line"></i>
+            <i class="ri-pinterest-line"></i>
+          </div>
+        </div>
+        <div class="footer-link">
+          <h3>Nosotros</h3>
+          <p><a href="#">Politicas</a></p>
+          <p><a href="#">Blog</a></p>
+          <p><a href="#">Noticias</a></p>
+          <p><a href="#">Centro de envíos</a></p>
+          <p><a href="#">Advertencias</a></p>
+          <p><a href="#">Inversores</a></p>
+        </div>
+
+        <div class="footer-link">
+          <h3>Soporte</h3>
+          <p><a href="#">Centro de soporte</a></p>
+          <p><a href="#">Gerencia</a></p>
+          <p><a href="#">Servicios</a></p>
+          <p><a href="#">Envíos internacionales</a></p>
+          <p><a href="#">Seguridad</a></p>
+          <p><a href="#">Contacto</a></p>
+        </div>
+
+        <div class="footer-link">
+          <h3>Ordenes</h3>
+          <p><a href="#">Ordenes aprobadas</a></p>
+          <p><a href="#">Recepción y entrega</a></p>
+          <p><a href="#">Devoluciones</a></p>
+          <p><a href="#">Cambios</a></p>
+          <p><a href="#">Desarrolladores</a></p>
+          <p><a href="#">Tarjetas de regalo</a></p>
+        </div>
+      </div>
+      <div class="tranding-tag">
+        <h3>Etiquetas de tendencia</h3>
+        <div class="tags">
+          <span>Accesorios</span>
+          <span>Apple iphone</span>
+          <span>Cámara & video</span>
+          <span>Celular</span>
+          <span>Computadores de escritorio</span>
+          <span>Electronica</span>
+          <span>Videojuegos</span>
+          <span>Dispositivos de juegos</span>
+          <span>Audífonos</span>
+          <span>Iwatch</span>
+          <span>Productos para niños</span>
+          <span>Laptops</span>
+          <span>Mobiles & Tablets</span>
+        </div>
+      </div>
+      <p class="copyright">© Grupo 2. All Rights Reserved.</p>
+    </footer>
+    <!-- footer end -->
+    <!-- script js -->
+    <script src="script.js"></script>
+    <!-- swiper slide cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+    <!-- bootstrap js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!-- products data -->
+    <script src="./data.js"></script>
+    <script>
+      var hero_ctg_swiper = new Swiper(".hero-ctg-swiper", {
+        slidesPerView: 6,
+        spaceBetween: 30,
+        breakpoints: {
+          1600: {
+            slidesPerView: 6,
+          },
+          1400: {
+            slidesPerView: 5,
+          },
+          1200: {
+            slidesPerView: 4,
+          },
+          1000: {
+            slidesPerView: 3,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          500: {
+            slidesPerView: 1.5,
+          },
+          0: {
+            slidesPerView: 1,
+          },
+        },
+      });
+
+      var hero_swiper = new Swiper(".hero-swiper", {
+        pagination: {
+          el: ".swiper-pagination",
+          dynamicBUllets: true,
+        },
+      });
+
+      var brand_swiper = new Swiper(".brand-swiper", {
+        slidesPerView: 6,
+        spaceBetween: 30,
+        loop: true,
+        breakpoints: {
+          1200: {
+            slidesPerView: 6,
+          },
+          1000: {
+            slidesPerView: 5,
+          },
+          768: {
+            slidesPerView: 4,
+          },
+          500: {
+            slidesPerView: 2,
+          },
+          0: {
+            slidesPerView: 1,
+          },
+        },
+      });
+
+      let container = document.querySelector(".card-container");
+      let cardCounter = 0;
+
+      function getData(products) {
+        products.forEach((element) => {
+          element.products.forEach((phone) => {
+            let card = document.createElement("div");
+
+            if (cardCounter < 8) {
+              card.setAttribute("class", "card");
+              card.setAttribute("data-id", phone.productId);
+              card.setAttribute("data-category", element.category);
+
+              let off_div = document.createElement("div");
+              off_div.setAttribute("class", "off");
+
+              let off_p = document.createElement("p");
+              off_p.innerHTML = phone.off;
+
+              let wishlist = document.createElement("div");
+              wishlist.setAttribute("class", "wishlist");
+
+              let wish_icon = document.createElement("i");
+              wish_icon.setAttribute("class", "ri-heart-line");
+
+              let img = document.createElement("img");
+              img.setAttribute("src", phone.image);
+
+              let h5 = document.createElement("h5");
+              h5.setAttribute("class", "product-title");
+              h5.innerHTML = phone.title;
+
+              let h4 = document.createElement("h4");
+              h4.setAttribute("class", "product-name");
+              h4.innerHTML = phone.name;
+
+              let rating_div = document.createElement("div");
+              rating_div.setAttribute("class", "rating");
+              rating_div.innerHTML = `
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-half-fill"></i>
+              `;
+
+              let price_div = document.createElement("div");
+              price_div.setAttribute("class", "price");
+
+              let red_p = document.createElement("p");
+              red_p.setAttribute("class", "red");
+              red_p.innerHTML = phone.price;
+
+              let lined_p = document.createElement("p");
+              lined_p.setAttribute("class", "lined");
+              lined_p.innerHTML = phone.lessprice;
+
+              let btn = document.createElement("button");
+              btn.setAttribute("class", "addtocardbtn");
+              btn.innerHTML = `Detalles`;
+
+              let hidden_div = document.createElement("div");
+              hidden_div.setAttribute("class", "hidden");
+
+              let ul = document.createElement("ul");
+
+              let first_li = document.createElement("li");
+              first_li.innerHTML = `RAM : ${phone.specification.ram}`;
+
+              let second_li = document.createElement("li");
+              second_li.innerHTML = `Storage : ${phone.specification.harddrive}`;
+
+              let third_li = document.createElement("li");
+              third_li.innerHTML = `Screen size : ${phone.specification.screenSize}`;
+
+              card.appendChild(off_div);
+              off_div.appendChild(off_p);
+              card.appendChild(wishlist);
+              wishlist.appendChild(wish_icon);
+              card.appendChild(img);
+              card.appendChild(h5);
+              card.appendChild(h4);
+              card.appendChild(rating_div);
+              card.appendChild(price_div);
+              price_div.appendChild(red_p);
+              price_div.appendChild(lined_p);
+              card.appendChild(btn);
+              card.appendChild(hidden_div);
+              hidden_div.appendChild(ul);
+              ul.appendChild(first_li);
+              ul.appendChild(second_li);
+              ul.appendChild(third_li);
+
+              container.appendChild(card);
+
+              cardCounter++;
+            }
+          });
+        });
+      }
+      getData(products);
+
+      // data load next page
+
+      const product_cards = document.querySelectorAll(".card");
+
+      product_cards.forEach((card) => {
+        card.addEventListener("click", function () {
+          //card id
+          const product_id = this.getAttribute("data-id");
+          //card category
+          const product_category = this.getAttribute("data-category");
+          window.location.href = `./productDetails.html?productId=${product_id}&productCategory=${product_category}`;
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AB-Commerce Website</title>
+    <!-- style css -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <!-- remix icon cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+    />
+    <!-- swiper slide cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css"
+    />
+  </head>
+<body>
+     <nav>
+      <div class="nav-top">
+        <div class="nav-top-left nav-top-content">
+          <ul class="main-menu">
+            <li>
+              <span class="main-menu-text"
+                >English <i class="fa-solid fa-chevron-down"></i
+              ></span>
+              <ul class="sub-menu">
+                <li>
+                  <span>English</span>
+                </li>
+                <li>
+                  <span>Spanish</span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="main-menu">
+            <li>
+              <span class="main-menu-text"
+                >USD <i class="fa-solid fa-chevron-down"></i
+              ></span>
+              <ul class="sub-menu">
+                <li>
+                  <span>USD</span>
+                </li>
+                <li>
+                  <span>COP</span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <p>Entregas gratis en compras sobre $100</p>
+        </div>
+        <ul class="nav-top-right nav-top-content">
+          <li>
+            <i class="fa-solid fa-bolt"></i>
+            <a href="#">Flash Sale</a>
+          </li>
+          <li>
+            <a href="./about.html">Nosotros</a>
+          </li>
+          <li>
+            <a href="./contact.html">Contacto</a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav-middel">
+        <div class="logo">
+          <a href="index.html">
+            <h2>AB<span>Commerce</span></h2>
+          </a>
+        </div>
+        <div class="nav-middel-input-box">
+          <select>
+            <option>Categorías</option>
+            <option>Cámaras</option>
+            <option>Accesorios</option>
+            <option>Cámaras y lentes</option>
+            <option>Drones</option>
+            <option>Laptops</option>
+            <option>Videojuegos</option>
+          </select>
+          <input type="text" placeholder="Buscar productos" />
+          <button class="btn">
+            <a href="#">Buscar</a>
+          </button>
+        </div>
+        <div class="nav-middel-right">
+          <div class="nav-middel-right-content">
+            <a  href="./contact.html" class="nav-middel-right-icon">
+              <i class="ri-customer-service-line"></i>
+            </a>
+            <div class="nav-middel-right-info">
+              <span>¿Tiene preguntas?</span>
+              <span>+09 9987 7931</span>
+            </div>
+          </div>
+          <div class="nav-middel-right-content">
+            <a href="./myAccount.html" class="nav-middel-right-icon">
+              <i class="ri-user-3-line"></i>
+              <div class="nav-middel-right-info">
+                <span>Cuenta</span>
+                <span>Ingresar</span>
+              </div>
+            </a>
+          </div>
+          <div class="nav-middel-right-content">
+            <a href="./carts.html" class="nav-middel-right-icon">
+              <i class="ri-shopping-cart-2-line"></i>
+
+              <div class="nav-middel-right-info">
+                <span>Mi</span>
+                <span>Carrito</span>
+              </div>
+            </a>
+          </div>
+          <div class="nav-middel-right-content">
+                <i class="ri-menu-line" id="open-menu"></i>
+            </div>
+        </div>
+
+      </div>
+      <div class="nav-bottom">
+            <div class="nav-bottom-left">
+                <div class="categories">
+                    <div class="categories-text">
+                        <i class="ri-menu-line"></i>
+                        <span>Categorías</span>
+                    </div>
+                    <i class="ri-arrow-down-s-line"></i>
+                </div>
+
+                <ul class="categories-item-menu">
+                    <a href="./product.html">
+                        <li>
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                            <span>Celulares</span>
+                        </li>
+                    </a>
+
+                    <a href="./product.html">
+                        <li>
+                            <i class="fa-solid fa-laptop"></i>
+                            <span>Laptops</span>
+                        </li>
+                    </a>
+
+                    <a href="./product.html">
+                        <li>
+                            <i class="fa-solid fa-camera-retro"></i>
+                            <span>Cámaras</span>
+                        </li>
+                    </a>
+
+                    <a href="./product.html">
+                        <li>
+                            <i class="fa-solid fa-headphones-simple"></i>
+                            <span>Audífonos</span>
+                        </li>
+                    </a>
+
+                    <a href="./product.html">
+                        <li>
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span>PC Gaming</span>
+                        </li>
+                    </a>
+
+                    <a href="./product.html">
+                        <li>
+                            <i class="fa-solid fa-tablet"></i>
+                            <span>Tablets</span>
+                        </li>
+                    </a>
+
+                    <a href="./product.html">
+                        <li>
+                            <i class="fa-solid fa-tv"></i>
+                            <span>Televisiones</span>
+                        </li>
+                    </a>
+
+                </ul>
+            </div>
+
+            <ul class="nav-bottom-menu">
+              <li>
+                <a href="index.html">Inicio</a>
+              </li>
+              <li>
+                <a href="./product.html">Laptops</a>
+              </li>
+              <li>
+                <a href="./product.html">Celulares</a>
+              </li>
+              <li>
+                <a href="./product.html">Audífonos</a>
+              </li>
+              <li>
+                <a href="./product.html">Cámaras</a>
+              </li>
+            </ul>
+            <a href="./wishlist.html">
+              <div class="vislist">
+                <i class="fa-regular fa-heart"></i>
+                <div class="today-deals">
+                  <span>Promoción de</span>
+                  <span>hoy</span>
+                </div>
+              </div>
+            </a>
+            <i class="ri-close-large-fill" id="close-menu"></i>
+        </div>
+    </nav>
+
+    <div class="page-section">
+      <h2>
+        <a href="./index.html">Inicio /</a>
+        <p id="product-name-title">Acceso / Registro</p>
+      </h2>
+    </div>
+
+    <section class="myaccount">
+        <div class="myaccount-container">
+            <h2>Acceso</h2>
+          <div class="myaccount-form">
+            <div class="box">
+              <label for="">Nombre de usuario o Email*</label>
+              <input id="loginUsername" type="text" required>
+            </div>
+            <div class="box">
+              <label for="">Contraseña*</label>
+              <input id="loginPassword" type="password" required>
+            </div>
+
+            <div class="login-btn">
+              <button id="loginBtn" class="btn" type="button">Acceder</button>
+            </div>
+          </div>
+        <div class="myaccount-container">
+            <h2>Registro</h2>
+            <div class="myaccount-form">
+                <div class="box">
+                    <label for="">Nombre de usuario*</label>
+                    <input type="text" required>
+                </div>
+                <div class="box">
+                    <label for="">Correo electrónico*</label>
+                    <input type="text" required>
+                </div>
+                <div class="box">
+                    <label for="">Contraseña*</label>
+                    <input type="password" required>
+                </div>
+
+                <div class="register-btn">
+                    <p>
+                        Sus datos personales se utilizarán para mejorar su experiencia en este sitio web, gestionar el acceso a su cuenta y para otros fines descritos en nuestra <span>política de privacidad</span>
+                    </p>
+                    <button class="btn" type="submit">
+                        <a href="#">Registrarte</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer start -->
+         <footer>
+          <div class="news-letter-wrapper">
+            <div class="news-letter">
+              <h3>Subscribete para recibir novedades y 20% de descuento</h3>
+              <div>
+                <input type="text" placeholder="Tu dirección de correo electrónico">
+                <button class="btn">Subscribete</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-wrapper">
+            <div class="features">
+              <i class="ri-truck-line"></i>
+              <p><strong>Envío gratis</strong>Por compras superiores a $100</p>
+            </div>
+            <div class="features">
+              <i class="ri-money-dollar-circle-line"></i>
+              <p><strong>Devoluciones</strong>Garantizadas antes de 7 días</p>
+            </div>
+            <div class="features">
+              <i class="ri-customer-service-line"></i>
+              <p><strong>Soporte 24/7</strong>Soporte 24 horas todos los días</p>
+            </div>
+            <div class="features">
+              <i class="ri-customer-service-line"></i>
+              <p><strong>Pagos</strong>pagos 100% seguros</p>
+            </div>
+          </div>
+          <div class="footer">
+            <div class="footer-link">
+              <div class="logo">
+                <a href="./index.html">
+                  <h2>AB<span>-Commerce</span></h2>
+                </a>
+              </div>
+              <p>Encuentra nuestros almacenes</p>
+              <p>Mira <a href="#">nuestras tiendas</a></p>
+              <p>email@gmail.com</p>
+              <p><b>+57 1234567897</b></p>
+              <div class="social">
+                <i class="ri-instagram-line"></i>
+                <i class="ri-facebook-line"></i>
+                <i class="ri-twitter-x-line"></i>
+                <i class="ri-pinterest-line"></i>
+              </div>
+            </div>
+            <div class="footer-link">
+              <h3>Nosotros</h3>
+              <p><a href="#">Politicas</a></p>
+              <p><a href="#">Blog</a></p>
+              <p><a href="#">Noticias</a></p>
+              <p><a href="#">Centro de envíos</a></p>
+              <p><a href="#">Advertencias</a></p>
+              <p><a href="#">Inversores</a></p>
+            </div>
+
+            <div class="footer-link">
+              <h3>Soporte</h3>
+              <p><a href="#">Centro de soporte</a></p>
+              <p><a href="#">Gerencia</a></p>
+              <p><a href="#">Servicios</a></p>
+              <p><a href="#">Envíos internacionales</a></p>
+              <p><a href="#">Seguridad</a></p>
+              <p><a href="#">Contacto</a></p>
+            </div>
+
+            <div class="footer-link">
+              <h3>Ordenes</h3>
+              <p><a href="#">Ordenes aprobadas</a></p>
+              <p><a href="#">Recepción y entrega</a></p>
+              <p><a href="#">Devoluciones</a></p>
+              <p><a href="#">Cambios</a></p>
+              <p><a href="#">Desarrolladores</a></p>
+              <p><a href="#">Tarjetas de regalo</a></p>
+            </div>
+
+          </div>
+          <div class="tranding-tag">
+            <h3>Etiquetas de tendencia</h3>
+            <div class="tags">
+              <span>Accesorios</span>
+              <span>Apple iphone</span>
+              <span>Cámara & video</span>
+              <span>Celular</span>
+              <span>Computadores de escritorio</span>
+              <span>Electronica</span>
+              <span>Videojuegos</span>
+              <span>Dispositivos de juegos</span>
+              <span>Audífonos</span>
+              <span>Iwatch</span>
+              <span>Productos para niños</span>
+              <span>Laptops</span>
+              <span>Mobiles & Tablets</span>
+            </div>
+          </div>
+          <p class="copyright">© Grupo 2. All Rights Reserved.</p>
+         </footer>
+        <!-- footer end -->
+    <!-- script js -->
+    <script src="script.js"></script>
+    <!-- swiper slide cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+    <!-- products data -->
+       <script src="./data.js"></script>
+
+     <script>
+       document.addEventListener('DOMContentLoaded', function() {
+           const token = localStorage.getItem('jhi-authenticationToken');
+
+           if (token) {
+               // El usuario ya está logueado, verificar su rol
+               fetch('/api/account', {
+                   headers: {
+                       'Authorization': 'Bearer ' + token,
+                       'Accept': 'application/json'
+                   }
+               })
+               .then(response => {
+                   if (response.ok) return response.json();
+                   throw new Error('No autorizado');
+               })
+               .then(user => {
+                   console.log('Usuario logueado:', user.login);
+
+                   // Si es ADMIN, mostrar panel de administración
+                   if (user.authorities && user.authorities.includes('ROLE_ADMIN')) {
+                       console.log('Es ADMIN, mostrando panel de administración...');
+                       showAdminPanel(user);
+                       return;
+                   }
+
+                   // Si es usuario normal, mostrar mensaje de bienvenida
+                   showWelcomeMessage(user);
+               })
+               .catch(error => {
+                   console.log('Token inválido o expirado:', error.message);
+                   localStorage.removeItem('jhi-authenticationToken');
+                   showLoginForm();
+               });
+           } else {
+               // No hay token, mostrar el formulario de login
+               showLoginForm();
+           }
+
+           // Configurar el botón "Acceder" para hacer login
+           const loginBtn = document.getElementById('loginBtn');
+           if (loginBtn) {
+               loginBtn.addEventListener('click', function() {
+                   const username = document.getElementById('loginUsername').value.trim();
+                   const password = document.getElementById('loginPassword').value;
+
+                   if (!username || !password) {
+                       alert('Por favor ingresa usuario y contraseña');
+                       return;
+                   }
+
+                   fetch('/api/authenticate', {
+                       method: 'POST',
+                       headers: {
+                           'Content-Type': 'application/json',
+                           'Accept': 'application/json'
+                       },
+                       body: JSON.stringify({
+                           username: username,
+                           password: password,
+                           rememberMe: false
+                       })
+                   })
+                   .then(response => {
+                       if (!response.ok) {
+                           throw new Error('Usuario o contraseña incorrectos');
+                       }
+                       return response.json();
+                   })
+                   .then(data => {
+                       localStorage.setItem('jhi-authenticationToken', data.id_token);
+                       console.log('Login exitoso, token guardado');
+
+                       // Recargar la página para que detecte el token
+                       window.location.reload();
+                   })
+                   .catch(error => {
+                       alert('Error: ' + error.message);
+                   });
+               });
+           }
+       });
+
+       // Función para mostrar el formulario de login
+       function showLoginForm() {
+           const form = document.querySelector('.myaccount-container');
+           if (form) {
+               form.style.display = 'block';
+           }
+       }
+
+       // Función para mostrar mensaje de bienvenida al usuario normal
+       function showWelcomeMessage(user) {
+           // Ocultar el formulario de login
+           const containers = document.querySelectorAll('.myaccount-container');
+           containers.forEach(container => {
+               container.style.display = 'none';
+           });
+
+           // Crear mensaje de bienvenida
+           const welcomeDiv = document.createElement('div');
+           welcomeDiv.className = 'myaccount-container';
+           welcomeDiv.innerHTML = `
+               <h2>¡Bienvenido, ${user.login}!</h2>
+               <div class="myaccount-form">
+                   <div class="box">
+                       <p><strong>Nombre:</strong> ${user.firstName || 'N/A'}</p>
+                       <p><strong>Email:</strong> ${user.email}</p>
+                       <p><strong>Rol:</strong> ${user.authorities ? user.authorities.join(', ') : 'N/A'}</p>
+                   </div>
+                   <div class="login-btn">
+                       <button id="logoutBtn" class="btn" type="button">Cerrar Sesión</button>
+                   </div>
+                   <div class="login-btn" style="margin-top: 10px;">
+                       <a href="./index.html" class="btn" style="text-decoration: none; display: inline-block;">Volver al Inicio</a>
+                   </div>
+               </div>
+           `;
+
+           // Insertar el mensaje antes del footer
+           const pageSection = document.querySelector('.page-section');
+           if (pageSection && pageSection.parentNode) {
+               pageSection.parentNode.insertBefore(welcomeDiv, pageSection.nextSibling);
+           }
+
+           // Configurar botón de cerrar sesión
+           const logoutBtn = document.getElementById('logoutBtn');
+           if (logoutBtn) {
+               logoutBtn.addEventListener('click', function() {
+                   localStorage.removeItem('jhi-authenticationToken');
+                   console.log('Sesión cerrada');
+                   window.location.reload();
+               });
+           }
+       }
+
+       // Función para mostrar panel de administración al ADMIN
+       function showAdminPanel(user) {
+           // Ocultar el formulario de login
+           const containers = document.querySelectorAll('.myaccount-container');
+           containers.forEach(container => {
+               container.style.display = 'none';
+           });
+
+           // Crear panel de administración
+           const adminDiv = document.createElement('div');
+           adminDiv.className = 'myaccount-container';
+           adminDiv.style.border = '3px solid #ff4400';
+           adminDiv.style.background = '#fff3cd';
+           adminDiv.innerHTML = `
+               <h2 style="color: #ff4400;">🔧 Panel de Administración</h2>
+               <div class="myaccount-form">
+                   <div class="box">
+                       <p><strong>Administrador:</strong> ${user.login}</p>
+                       <p><strong>Email:</strong> ${user.email}</p>
+                       <p><strong>Rol:</strong> ${user.authorities ? user.authorities.join(', ') : 'N/A'}</p>
+                   </div>
+                   <div class="login-btn">
+                       <a href="http://localhost:9000/" class="btn" style="text-decoration: none; display: inline-block; background-color: #ff4400; color: white;">
+                           Ir al Panel de JHipster
+                       </a>
+                   </div>
+                   <div class="login-btn" style="margin-top: 10px;">
+                       <a href="./index.html" class="btn" style="text-decoration: none; display: inline-block; background-color: #28a745; color: white;">
+                           Volver a la Tienda
+                       </a>
+                   </div>
+                   <div class="login-btn" style="margin-top: 10px;">
+                       <button id="logoutBtn" class="btn" type="button" style="background-color: #dc3545; color: white;">
+                           Cerrar Sesión
+                       </button>
+                   </div>
+               </div>
+           `;
+
+           // Insertar el panel antes del footer
+           const pageSection = document.querySelector('.page-section');
+           if (pageSection && pageSection.parentNode) {
+               pageSection.parentNode.insertBefore(adminDiv, pageSection.nextSibling);
+           }
+
+           // Configurar botón de cerrar sesión
+           const logoutBtn = document.getElementById('logoutBtn');
+           if (logoutBtn) {
+               logoutBtn.addEventListener('click', function() {
+                   localStorage.removeItem('jhi-authenticationToken');
+                   console.log('Sesión cerrada');
+                   window.location.href = './index.html';
+               });
+           }
+       }
+     </script>
+
+</body>
+</html>
