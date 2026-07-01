@@ -14,6 +14,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import shop.abcommerce.repository.ProductRepository;
@@ -55,6 +57,8 @@ public class ProductResource {
      * @throws URISyntaxException if the Location URI syntax is incorrect.
      */
     @PostMapping("")
+    //@Transactional
+    @PreAuthorize("hasAuthority('ROLE_ADMIN') or hasAuthority('ROLE_SUPERVISOR')")
     public ResponseEntity<ProductDTO> createProduct(@Valid @RequestBody ProductDTO productDTO) throws URISyntaxException {
         LOG.debug("REST request to save Product : {}", productDTO);
         if (productDTO.getId() != null) {
@@ -77,6 +81,8 @@ public class ProductResource {
      * @throws URISyntaxException if the Location URI syntax is incorrect.
      */
     @PutMapping("/{id}")
+    @Transactional
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN') or hasAuthority('ROLE_SUPERVISOR')")
     public ResponseEntity<ProductDTO> updateProduct(
         @PathVariable(value = "id", required = false) final String id,
         @Valid @RequestBody ProductDTO productDTO
@@ -111,6 +117,8 @@ public class ProductResource {
      * @throws URISyntaxException if the Location URI syntax is incorrect.
      */
     @PatchMapping(value = "/{id}", consumes = { "application/json", "application/merge-patch+json" })
+    @Transactional
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN') or hasAuthority('ROLE_SUPERVISOR')")
     public ResponseEntity<ProductDTO> partialUpdateProduct(
         @PathVariable(value = "id", required = false) final String id,
         @NotNull @RequestBody ProductDTO productDTO
@@ -178,6 +186,8 @@ public class ProductResource {
      * @return the {@link ResponseEntity} with status {@code 204 (NO_CONTENT)}.
      */
     @DeleteMapping("/{id}")
+    @Transactional
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
     public ResponseEntity<Void> deleteProduct(@PathVariable("id") String id) {
         LOG.debug("REST request to delete Product : {}", id);
         productService.delete(id);

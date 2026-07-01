@@ -14,6 +14,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import shop.abcommerce.repository.CategoryRepository;
@@ -55,6 +57,8 @@ public class CategoryResource {
      * @throws URISyntaxException if the Location URI syntax is incorrect.
      */
     @PostMapping("")
+    @Transactional
+    @PreAuthorize("hasRole('ROLE_ADMIN') or hasAuthority('ROLE_SUPERVISOR')")
     public ResponseEntity<CategoryDTO> createCategory(@Valid @RequestBody CategoryDTO categoryDTO) throws URISyntaxException {
         LOG.debug("REST request to save Category : {}", categoryDTO);
         if (categoryDTO.getId() != null) {
@@ -77,6 +81,8 @@ public class CategoryResource {
      * @throws URISyntaxException if the Location URI syntax is incorrect.
      */
     @PutMapping("/{id}")
+    @Transactional
+    @PreAuthorize("hasRole('ROLE_ADMIN') or hasAuthority('ROLE_SUPERVISOR')")
     public ResponseEntity<CategoryDTO> updateCategory(
         @PathVariable(value = "id", required = false) final String id,
         @Valid @RequestBody CategoryDTO categoryDTO
@@ -111,6 +117,8 @@ public class CategoryResource {
      * @throws URISyntaxException if the Location URI syntax is incorrect.
      */
     @PatchMapping(value = "/{id}", consumes = { "application/json", "application/merge-patch+json" })
+    @Transactional
+    @PreAuthorize("hasRole('ROLE_ADMIN') or hasAuthority('ROLE_SUPERVISOR')")
     public ResponseEntity<CategoryDTO> partialUpdateCategory(
         @PathVariable(value = "id", required = false) final String id,
         @NotNull @RequestBody CategoryDTO categoryDTO
@@ -169,6 +177,8 @@ public class CategoryResource {
      * @return the {@link ResponseEntity} with status {@code 204 (NO_CONTENT)}.
      */
     @DeleteMapping("/{id}")
+    @Transactional
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ResponseEntity<Void> deleteCategory(@PathVariable("id") String id) {
         LOG.debug("REST request to delete Category : {}", id);
         categoryService.delete(id);

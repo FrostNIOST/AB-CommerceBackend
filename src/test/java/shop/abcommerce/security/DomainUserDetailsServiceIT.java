@@ -24,11 +24,11 @@ import shop.abcommerce.service.UserService;
 class DomainUserDetailsServiceIT {
 
     private static final String USER_ONE_LOGIN = "test-user-one";
-    private static final String USER_ONE_EMAIL = "test-user-one@localhost";
+    private static final String USER_ONE_EMAIL = "test-user-one@localhost.com";
     private static final String USER_TWO_LOGIN = "test-user-two";
-    private static final String USER_TWO_EMAIL = "test-user-two@localhost";
+    private static final String USER_TWO_EMAIL = "test-user-two@localhost.com";
     private static final String USER_THREE_LOGIN = "test-user-three";
-    private static final String USER_THREE_EMAIL = "test-user-three@localhost";
+    private static final String USER_THREE_EMAIL = "test-user-three@localhost.com";
 
     @Autowired
     private UserRepository userRepository;
@@ -46,8 +46,6 @@ class DomainUserDetailsServiceIT {
         userOne.setPassword(RandomStringUtils.insecure().nextAlphanumeric(60));
         userOne.setActivated(true);
         userOne.setEmail(USER_ONE_EMAIL);
-        userOne.setFirstName("userOne");
-        userOne.setLastName("doe");
         userOne.setLangKey("en");
         return userOne;
     }
@@ -58,8 +56,6 @@ class DomainUserDetailsServiceIT {
         userTwo.setPassword(RandomStringUtils.insecure().nextAlphanumeric(60));
         userTwo.setActivated(true);
         userTwo.setEmail(USER_TWO_EMAIL);
-        userTwo.setFirstName("userTwo");
-        userTwo.setLastName("doe");
         userTwo.setLangKey("en");
         return userTwo;
     }
@@ -70,8 +66,6 @@ class DomainUserDetailsServiceIT {
         userThree.setPassword(RandomStringUtils.insecure().nextAlphanumeric(60));
         userThree.setActivated(false);
         userThree.setEmail(USER_THREE_EMAIL);
-        userThree.setFirstName("userThree");
-        userThree.setLastName("doe");
         userThree.setLangKey("en");
         return userThree;
     }

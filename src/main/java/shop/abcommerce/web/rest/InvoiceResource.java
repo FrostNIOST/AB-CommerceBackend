@@ -14,6 +14,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import shop.abcommerce.repository.InvoiceRepository;
@@ -55,6 +57,8 @@ public class InvoiceResource {
      * @throws URISyntaxException if the Location URI syntax is incorrect.
      */
     @PostMapping("")
+    @Transactional
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN') or hasAuthority('ROLE_SUPERVISOR')or hasAuthority('ROLE_USER')")
     public ResponseEntity<InvoiceDTO> createInvoice(@Valid @RequestBody InvoiceDTO invoiceDTO) throws URISyntaxException {
         LOG.debug("REST request to save Invoice : {}", invoiceDTO);
         if (invoiceDTO.getId() != null) {
@@ -77,6 +81,8 @@ public class InvoiceResource {
      * @throws URISyntaxException if the Location URI syntax is incorrect.
      */
     @PutMapping("/{id}")
+    @Transactional
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN') or hasAuthority('ROLE_SUPERVISOR')")
     public ResponseEntity<InvoiceDTO> updateInvoice(
         @PathVariable(value = "id", required = false) final String id,
         @Valid @RequestBody InvoiceDTO invoiceDTO
@@ -111,6 +117,8 @@ public class InvoiceResource {
      * @throws URISyntaxException if the Location URI syntax is incorrect.
      */
     @PatchMapping(value = "/{id}", consumes = { "application/json", "application/merge-patch+json" })
+    @Transactional
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN') or hasAuthority('ROLE_SUPERVISOR')")
     public ResponseEntity<InvoiceDTO> partialUpdateInvoice(
         @PathVariable(value = "id", required = false) final String id,
         @NotNull @RequestBody InvoiceDTO invoiceDTO
@@ -143,6 +151,8 @@ public class InvoiceResource {
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and the list of Invoices in body.
      */
     @GetMapping("")
+    @Transactional(readOnly = true)
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN') or hasAuthority('ROLE_SUPERVISOR') or hasAuthority('ROLE_USER')")
     public ResponseEntity<List<InvoiceDTO>> getAllInvoices(
         @org.springdoc.core.annotations.ParameterObject Pageable pageable,
         @RequestParam(name = "eagerload", required = false, defaultValue = "true") boolean eagerload
@@ -178,6 +188,8 @@ public class InvoiceResource {
      * @return the {@link ResponseEntity} with status {@code 204 (NO_CONTENT)}.
      */
     @DeleteMapping("/{id}")
+    @Transactional
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
     public ResponseEntity<Void> deleteInvoice(@PathVariable("id") String id) {
         LOG.debug("REST request to delete Invoice : {}", id);
         invoiceService.delete(id);

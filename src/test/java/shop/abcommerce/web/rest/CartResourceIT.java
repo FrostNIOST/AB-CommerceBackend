@@ -21,6 +21,7 @@ import shop.abcommerce.IntegrationTest;
 import shop.abcommerce.domain.AccountU;
 import shop.abcommerce.domain.Cart;
 import shop.abcommerce.domain.enumeration.State;
+import shop.abcommerce.repository.AccountURepository;
 import shop.abcommerce.repository.CartRepository;
 import shop.abcommerce.service.dto.CartDTO;
 import shop.abcommerce.service.mapper.CartMapper;
@@ -46,6 +47,9 @@ class CartResourceIT {
     private CartRepository cartRepository;
 
     @Autowired
+    private AccountURepository accountURepository;
+
+    @Autowired
     private CartMapper cartMapper;
 
     @Autowired
@@ -54,6 +58,8 @@ class CartResourceIT {
     private Cart cart;
 
     private Cart insertedCart;
+
+    private AccountU insertedAccount;
 
     /**
      * Create an entity for this test.
@@ -97,6 +103,10 @@ class CartResourceIT {
         if (insertedCart != null) {
             cartRepository.delete(insertedCart);
             insertedCart = null;
+        }
+        if (insertedAccount != null) {
+            accountURepository.delete(insertedAccount);
+            insertedAccount = null;
         }
     }
 
@@ -192,7 +202,9 @@ class CartResourceIT {
 
     @Test
     void putExistingCart() throws Exception {
-        // Initialize the database
+        // Initialize the database - save account first since cart has @NotNull account reference
+        insertedAccount = accountURepository.save(cart.getAccount());
+        cart.setAccount(insertedAccount);
         insertedCart = cartRepository.save(cart);
 
         long databaseSizeBeforeUpdate = getRepositoryCount();
@@ -376,8 +388,11 @@ class CartResourceIT {
     }
 
     @Test
+    @WithMockUser(roles = "ADMIN")
     void deleteCart() throws Exception {
-        // Initialize the database
+        // Initialize the database - need to persist account first
+        insertedAccount = accountURepository.save(cart.getAccount());
+        cart.setAccount(insertedAccount);
         insertedCart = cartRepository.save(cart);
 
         long databaseSizeBeforeDelete = getRepositoryCount();
